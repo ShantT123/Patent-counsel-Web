@@ -1,0 +1,4 @@
+interface:
+  display_name: "Patent Portfolio Strategy"
+  short_description: "Map technology ownership, portfolio records, and strategy gaps"
+  default_prompt: "Use $portfolio-strategy to map the supplied technology buckets, teams, products, roadmap targets, and portfolio records, then prepare an evidence-linked strategy-gap review."

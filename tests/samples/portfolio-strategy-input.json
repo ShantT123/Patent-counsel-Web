@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-11-02",
+  "review_window_days": 180,
+  "inventory_scope": "Fictional five-record internal extract only. Not a complete company portfolio, prior-art search, or freedom-to-operate review.",
+  "teams": [
+    {
+      "id": "ENG",
+      "name": "Engineering",
+      "parent_id": null,
+      "source_refs": [
+        "sources.md ORG-01 \u00a71"
+      ]
+    },
+    {
+      "id": "EMB",
+      "name": "Embedded Systems",
+      "parent_id": "ENG",
+      "source_refs": [
+        "sources.md ORG-01 \u00a71"
+      ]
+    },
+    {
+      "id": "PLAT",
+      "name": "Platform",
+      "parent_id": "ENG",
+      "source_refs": [
+        "sources.md ORG-01 \u00a71"
+      ]
+    }
+  ],
+  "people": [
+    {
+      "id": "MIRA",
+      "name": "Mira (fictional)",
+      "team_ids": [
+        "EMB"
+      ],
+      "source_refs": [
+        "sources.md ORG-01 \u00a71"
+      ]
+    },
+    {
+      "id": "THEO",
+      "name": "Theo (fictional)",
+      "team_ids": [
+        "PLAT"
+      ],
+      "source_refs": [
+        "sources.md ORG-01 \u00a71"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "SENSOR",
+      "name": "Aster warehouse sensor",
+      "source_refs": [
+        "sources.md ROAD-01 \u00a71"
+      ]
+    },
+    {
+      "id": "GATEWAY",
+      "name": "Aster gateway",
+      "source_refs": [
+        "sources.md ROAD-01 \u00a71"
+      ]
+    }
+  ],
+  "buckets": [
+    {
+      "id": "EDGE",
+      "name": "Low-power edge telemetry",
+      "description": "Sensor data collection and radio scheduling.",
+      "team_ids": [
+        "EMB"
+      ],
+      "product_ids": [
+        "SENSOR"
+      ],
+      "person_ids": [
+        "MIRA"
+      ],
+      "source_refs": [
+        "sources.md MAP-01 \u00a71"
+      ]
+    },
+    {
+      "id": "DIAG",
+      "name": "Gateway diagnostics",
+      "description": "User-visible timing and operational diagnostics.",
+      "team_ids": [
+        "PLAT"
+      ],
+      "product_ids": [
+        "GATEWAY"
+      ],
+      "person_ids": [
+        "THEO"
+      ],
+      "source_refs": [
+        "sources.md MAP-01 \u00a71"
+      ]
+    },
+    {
+      "id": "SEC",
+      "name": "Device credential recovery",
+      "description": "Recovering device identity after credential loss; ownership unresolved.",
+      "team_ids": [],
+      "product_ids": [
+        "SENSOR",
+        "GATEWAY"
+      ],
+      "person_ids": [],
+      "source_refs": [
+        "sources.md MAP-01 \u00a71"
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "T-ALERT",
+      "bucket_id": "EDGE",
+      "feature": "Batch telemetry while preserving urgent alerts",
+      "technical_tags": [
+        "batching",
+        "urgent alerts"
+      ],
+      "jurisdiction": "US",
+      "horizon": "2027 product roadmap",
+      "priority": "high",
+      "objective": "product",
+      "desired_family_count": 2,
+      "source_refs": [
+        "sources.md ROAD-01 \u00a71"
+      ]
+    },
+    {
+      "id": "T-EU",
+      "bucket_id": "EDGE",
+      "feature": "European telemetry scheduling position",
+      "technical_tags": [
+        "batching"
+      ],
+      "jurisdiction": "EP",
+      "horizon": "2027 expansion",
+      "priority": "medium",
+      "objective": "offensive",
+      "desired_family_count": 1,
+      "source_refs": [
+        "sources.md ROAD-01 \u00a71"
+      ]
+    },
+    {
+      "id": "T-DIAG",
+      "bucket_id": "DIAG",
+      "feature": "Observable gateway timing diagnostics",
+      "technical_tags": [
+        "timing diagnostics"
+      ],
+      "jurisdiction": "US",
+      "horizon": "2027 release",
+      "priority": "high",
+      "objective": "product",
+      "desired_family_count": 1,
+      "source_refs": [
+        "sources.md ROAD-01 \u00a71"
+      ]
+    },
+    {
+      "id": "T-SEC",
+      "bucket_id": "SEC",
+      "feature": "Credential recovery resilience",
+      "technical_tags": [
+        "credential recovery"
+      ],
+      "jurisdiction": "US",
+      "horizon": "2027 risk planning",
+      "priority": "high",
+      "objective": "defensive",
+      "desired_family_count": 1,
+      "source_refs": [
+        "sources.md ROAD-01 \u00a71"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "R17-US",
+      "title": "Gateway transmission scheduling",
+      "family_id": "F17",
+      "application_id": null,
+      "publication_id": null,
+      "patent_id": null,
+      "jurisdiction": "US",
+      "status": "pending",
+      "status_as_of": "2026-10-24",
+      "filing_date": "2025-05-01",
+      "priority_date": "2025-01-10",
+      "technical_tags": [
+        "batching"
+      ],
+      "bucket_links": [
+        {
+          "bucket_id": "EDGE",
+          "state": "confirmed",
+          "rationale": "Fictional reviewer classification, not claim coverage.",
+          "source_refs": [
+            "sources.md PORT-01 \u00a71",
+            "sources.md MAP-01 \u00a71"
+          ]
+        }
+      ],
+      "claim_refs": [],
+      "source_refs": [
+        "sources.md PORT-01 \u00a71",
+        "sources.md MAP-01 \u00a71"
+      ]
+    },
+    {
+      "id": "R17-EP",
+      "title": "Gateway scheduling counterpart",
+      "family_id": "F17",
+      "application_id": null,
+      "publication_id": null,
+      "patent_id": null,
+      "jurisdiction": "EP",
+      "status": "pending",
+      "status_as_of": "2026-10-24",
+      "filing_date": "2025-05-01",
+      "priority_date": "2025-01-10",
+      "technical_tags": [
+        "batching"
+      ],
+      "bucket_links": [
+        {
+          "bucket_id": "EDGE",
+          "state": "confirmed",
+          "rationale": "Fictional reviewer classification, not claim coverage.",
+          "source_refs": [
+            "sources.md PORT-01 \u00a71",
+            "sources.md MAP-01 \u00a71"
+          ]
+        }
+      ],
+      "claim_refs": [],
+      "source_refs": [
+        "sources.md PORT-01 \u00a71",
+        "sources.md MAP-01 \u00a71"
+      ]
+    },
+    {
+      "id": "R25-US",
+      "title": "Timing diagnostics",
+      "family_id": "F25",
+      "application_id": null,
+      "publication_id": null,
+      "patent_id": null,
+      "jurisdiction": "US",
+      "status": "issued",
+      "status_as_of": "2025-01-01",
+      "filing_date": "2025-05-01",
+      "priority_date": "2025-01-10",
+      "technical_tags": [
+        "timing diagnostics"
+      ],
+      "bucket_links": [
+        {
+          "bucket_id": "DIAG",
+          "state": "confirmed",
+          "rationale": "Fictional reviewer classification, not claim coverage.",
+          "source_refs": [
+            "sources.md PORT-01 \u00a71",
+            "sources.md MAP-01 \u00a71"
+          ]
+        }
+      ],
+      "claim_refs": [
+        "sources.md CLAIM-25 \u00a71"
+      ],
+      "source_refs": [
+        "sources.md PORT-01 \u00a71",
+        "sources.md MAP-01 \u00a71"
+      ]
+    },
+    {
+      "id": "R09-US",
+      "title": "Legacy gateway monitoring",
+      "family_id": "F09",
+      "application_id": null,
+      "publication_id": null,
+      "patent_id": null,
+      "jurisdiction": "US",
+      "status": "expired",
+      "status_as_of": "2026-10-24",
+      "filing_date": "2025-05-01",
+      "priority_date": "2025-01-10",
+      "technical_tags": [
+        "legacy monitoring"
+      ],
+      "bucket_links": [
+        {
+          "bucket_id": "DIAG",
+          "state": "confirmed",
+          "rationale": "Fictional reviewer classification, not claim coverage.",
+          "source_refs": [
+            "sources.md PORT-01 \u00a71",
+            "sources.md MAP-01 \u00a71"
+          ]
+        }
+      ],
+      "claim_refs": [],
+      "source_refs": [
+        "sources.md PORT-01 \u00a71",
+        "sources.md MAP-01 \u00a71"
+      ]
+    },
+    {
+      "id": "R31-US",
+      "title": "Credential recovery prototype",
+      "family_id": null,
+      "application_id": null,
+      "publication_id": null,
+      "patent_id": null,
+      "jurisdiction": "US",
+      "status": "abandoned",
+      "status_as_of": null,
+      "filing_date": "2025-05-01",
+      "priority_date": "2025-01-10",
+      "technical_tags": [
+        "credential recovery"
+      ],
+      "bucket_links": [
+        {
+          "bucket_id": "SEC",
+          "state": "proposed",
+          "rationale": "Fictional reviewer classification, not claim coverage.",
+          "source_refs": [
+            "sources.md PORT-01 \u00a71",
+            "sources.md MAP-01 \u00a71"
+          ]
+        }
+      ],
+      "claim_refs": [],
+      "source_refs": [
+        "sources.md PORT-01 \u00a71",
+        "sources.md MAP-01 \u00a71"
+      ]
+    }
+  ],
+  "disclosures": [
+    {
+      "id": "D01",
+      "title": "Quiet-window batching",
+      "bucket_ids": [
+        "EDGE"
+      ],
+      "target_ids": [
+        "T-ALERT"
+      ],
+      "stage": "review",
+      "source_refs": [
+        "sources.md PIPE-01 \u00a71"
+      ]
+    },
+    {
+      "id": "D02",
+      "title": "Additional gateway trace view",
+      "bucket_ids": [
+        "DIAG"
+      ],
+      "target_ids": [
+        "T-DIAG"
+      ],
+      "stage": "filed",
+      "source_refs": [
+        "sources.md PIPE-01 \u00a71"
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "id": "A-DIAG",
+      "target_id": "T-DIAG",
+      "result": "supports",
+      "reviewer": "Fictional counsel reviewer",
+      "reviewed_on": "2026-10-20",
+      "record_ids": [
+        "R25-US"
+      ],
+      "rationale": "Illustrative supplied claim review reports support; status evidence is old and needs refresh.",
+      "source_refs": [
+        "sources.md REVIEW-01 \u00a71"
+      ]
+    },
+    {
+      "id": "A-SEC",
+      "target_id": "T-SEC",
+      "result": "gap",
+      "reviewer": "Fictional counsel reviewer",
+      "reviewed_on": "2026-10-20",
+      "record_ids": [],
+      "rationale": "Illustrative reviewer reports no supporting issued claims within the expressly limited extract reviewed; not a company-wide or legal clearance conclusion.",
+      "source_refs": [
+        "sources.md REVIEW-01 \u00a72"
+      ]
+    }
+  ]
+}

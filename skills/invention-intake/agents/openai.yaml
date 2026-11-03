@@ -1,0 +1,4 @@
+interface:
+  display_name: "Patent Invention Intake"
+  short_description: "Develop source-linked invention disclosures for counsel review"
+  default_prompt: "Use $invention-intake to review these materials, identify technical gaps, and prepare a source-linked disclosure and filing-review packet."

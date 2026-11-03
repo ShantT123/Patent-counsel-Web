@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/ShantT123/Patent-Counsel-Agent",
+  "commit": "3ea14dfd29ee7dc2c6e467d9f71f0b5e62011d5c",
+  "files": {
+    "filing-review/SKILL.md": "6141d855b68e200bc626b29e7bc83cd833b284469c4093d4cad3ed36678ff44e",
+    "invention-intake/SKILL.md": "ebb709b80434eff928879ad66587ad5657ce22649f733633e6198eff68a49548",
+    "portfolio-strategy/SKILL.md": "e8ed1ad5c7d91b2270704f88d723c587924c076887146d4b1b13ed1646f168af",
+    "portfolio-strategy/references/workflow.md": "8f12ee7e7ca2830a7cdccc20c18b09050a196a2d1382d6b8b32761d26db827db",
+    "portfolio-strategy/references/input-format.md": "5383e8755e8218e7ff686695feb4e27a303db909d15f6a010b4ff08b2ea1af37",
+    "portfolio-strategy/agents/openai.yaml": "379564ddd9be002db2d2ea93f938be388b59f8cb7cfd3b38ca5e5db6b0392e77",
+    "portfolio-strategy/scripts/strategy.py": "37eadb7cd8da87b94123f333b6fa772c0b31ec2a93748c890cb3fae1d5b5c447",
+    "invention-intake/references/filing-review.md": "c00626b20cdd3778212434e1ba224871adac9d55a4c08fdd3a67b33a974a96aa",
+    "invention-intake/references/evidence.md": "17b53bdbde7dea8eeda4a5d062e7aecfbff000061df2acccc6edd5f5d55aa2af",
+    "invention-intake/references/outputs.md": "4a0a02704ac412dd6bb14b746f91c2cfbd6c26517c38385e94e050be6e200a3d",
+    "invention-intake/references/interview.md": "6e20f41ce8a0c8a9b5e64285ca0f2b6f8019c91be601de85b33aa3f6463a9a40",
+    "invention-intake/agents/openai.yaml": "c4341c24c468a3250d47006a3eb5a1580f9a109707406643f4403df0943a7c6c",
+    "filing-review/references/review-guidance.md": "2a45255fd50fac994a0ae551804bd1061ee95315e418e6cb6917572a27463556",
+    "filing-review/references/input-format.md": "a46871b5b0ce04175ffc6e099eb0405ff95f1c6e4642c9ea77e6e546914b99a3",
+    "filing-review/agents/openai.yaml": "c2edc57547d61e024b6277d1319c9761c7b85dacb57797a3af623b6df12d6139",
+    "filing-review/scripts/review.py": "40ed0a7a2df58a4d0c94923a1002e5614d6559887755807c70c88bd48fea0eb5"
+  }
+}

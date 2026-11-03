@@ -1,0 +1,4 @@
+interface:
+  display_name: "Patent Filing Review"
+  short_description: "Review filing priorities, portfolio fit, and budget scenarios"
+  default_prompt: "Use $filing-review to assess supplied inventions against company criteria, identify portfolio-review candidates, and calculate filing budget scenarios."

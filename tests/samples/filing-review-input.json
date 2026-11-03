@@ -1,0 +1,263 @@
+{
+  "schema_version": "1.0",
+  "policy": {
+    "id": "ASTER-DRAFT-01",
+    "state": "draft",
+    "business_threshold": "70",
+    "criteria": [
+      {
+        "id": "product_relevance",
+        "description": "1 = no identified product use; 10 = central to a supplied product initiative. Higher is more favorable.",
+        "weight": "40",
+        "min": 1,
+        "max": 10
+      },
+      {
+        "id": "competitor_interest",
+        "description": "1 = no identified reason for competitor use; 10 = strong supplied evidence of competitor interest. Higher is more favorable.",
+        "weight": "35",
+        "min": 1,
+        "max": 10
+      },
+      {
+        "id": "detectability",
+        "description": "1 = no identified external observability; 10 = clear observable behavior supported by evidence. Higher is more favorable.",
+        "weight": "25",
+        "min": 1,
+        "max": 10
+      }
+    ]
+  },
+  "strategy": {
+    "buckets": [
+      {
+        "id": "EDGE",
+        "name": "Low-power edge telemetry",
+        "team": "Embedded Systems",
+        "source_refs": [
+          "sources.md STR-01 \u00a71"
+        ]
+      }
+    ],
+    "gaps": [
+      {
+        "id": "GAP-01",
+        "bucket_id": "EDGE",
+        "description": "Company-reported priority area: preserve alert responsiveness while reducing radio activity; gap is not independently verified.",
+        "source_refs": [
+          "sources.md STR-01 \u00a72"
+        ]
+      }
+    ]
+  },
+  "inventions": [
+    {
+      "id": "INV-01",
+      "title": "Quiet-window batching",
+      "bucket_ids": [
+        "EDGE"
+      ],
+      "technical_terms": [
+        "batching",
+        "gateway scheduling"
+      ],
+      "gap_ids": [
+        "GAP-01"
+      ],
+      "source_refs": [
+        "sources.md INV-01 \u00a71"
+      ],
+      "ratings": {
+        "product_relevance": {
+          "value": 9,
+          "rationale": "Central to the supplied radio-activity initiative.",
+          "source_refs": [
+            "sources.md RATE-01 \u00a71"
+          ]
+        },
+        "competitor_interest": {
+          "value": 7,
+          "rationale": "Reviewer expects competitors to value reduced transmissions; limited evidence.",
+          "source_refs": [
+            "sources.md RATE-01 \u00a71"
+          ]
+        },
+        "detectability": {
+          "value": null,
+          "rationale": "External observability has not been established.",
+          "source_refs": []
+        }
+      }
+    },
+    {
+      "id": "INV-02",
+      "title": "Observable gateway timing diagnostics",
+      "bucket_ids": [
+        "EDGE"
+      ],
+      "technical_terms": [
+        "timing diagnostics"
+      ],
+      "gap_ids": [],
+      "source_refs": [
+        "sources.md INV-02 \u00a71"
+      ],
+      "ratings": {
+        "product_relevance": {
+          "value": 8,
+          "rationale": "Supports supplied gateway diagnostic roadmap.",
+          "source_refs": [
+            "sources.md RATE-02 \u00a71"
+          ]
+        },
+        "competitor_interest": {
+          "value": 6,
+          "rationale": "Reviewer estimates moderate interest.",
+          "source_refs": [
+            "sources.md RATE-02 \u00a71"
+          ]
+        },
+        "detectability": {
+          "value": 8,
+          "rationale": "Reviewer describes visible diagnostic output.",
+          "source_refs": [
+            "sources.md RATE-02 \u00a71"
+          ]
+        }
+      }
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "INT-017-US",
+      "title": "Gateway-coordinated sensor transmission scheduling",
+      "family_id": "FAM-017",
+      "jurisdiction": "US",
+      "status": "pending",
+      "status_as_of": "2026-10-24",
+      "bucket_ids": [
+        "EDGE"
+      ],
+      "technical_terms": [
+        "gateway scheduling"
+      ],
+      "claim_refs": [],
+      "source_refs": [
+        "sources.md PORT-01 \u00a71"
+      ]
+    },
+    {
+      "id": "INT-017-EP",
+      "title": "Sensor scheduling counterpart",
+      "family_id": "FAM-017",
+      "jurisdiction": "EP",
+      "status": "pending",
+      "status_as_of": "2026-10-24",
+      "bucket_ids": [
+        "EDGE"
+      ],
+      "technical_terms": [
+        "gateway scheduling"
+      ],
+      "claim_refs": [],
+      "source_refs": [
+        "sources.md PORT-01 \u00a71"
+      ]
+    }
+  ],
+  "cost_catalog": {
+    "currency": "USD",
+    "items": [
+      {
+        "id": "moderate_preparation",
+        "description": "Synthetic moderate-complexity preparation estimate; excludes official fees.",
+        "unit_cost": "12000.00",
+        "source_refs": [
+          "sources.md COST-01 \u00a71"
+        ]
+      },
+      {
+        "id": "official_fee_allowance",
+        "description": "Synthetic planning allowance only; not a current fee schedule.",
+        "unit_cost": "2000.00",
+        "source_refs": [
+          "sources.md COST-01 \u00a71"
+        ]
+      }
+    ]
+  },
+  "budget": {
+    "currency": "USD",
+    "start": "2027-01-01",
+    "end": "2027-12-31",
+    "limit": "80000.00",
+    "spent": "15000.00",
+    "committed": "20000.00",
+    "contingency_percent": "10",
+    "source_refs": [
+      "sources.md BUD-01 \u00a71"
+    ]
+  },
+  "plan": [
+    {
+      "id": "L1",
+      "invention_id": "INV-01",
+      "cost_id": "moderate_preparation",
+      "quantity": 1,
+      "expected_date": "2027-02-01",
+      "source_refs": [
+        "sources.md PLAN-01 \u00a71"
+      ]
+    },
+    {
+      "id": "L2",
+      "invention_id": "INV-01",
+      "cost_id": "official_fee_allowance",
+      "quantity": 1,
+      "expected_date": "2027-02-01",
+      "source_refs": [
+        "sources.md PLAN-01 \u00a71"
+      ]
+    },
+    {
+      "id": "L3",
+      "invention_id": "INV-02",
+      "cost_id": "moderate_preparation",
+      "quantity": 1,
+      "expected_date": "2027-05-01",
+      "source_refs": [
+        "sources.md PLAN-01 \u00a71"
+      ]
+    },
+    {
+      "id": "L4",
+      "invention_id": "INV-02",
+      "cost_id": "official_fee_allowance",
+      "quantity": 1,
+      "expected_date": "2027-05-01",
+      "source_refs": [
+        "sources.md PLAN-01 \u00a71"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "all",
+      "description": "Estimate both proposed filings; no authorization implied.",
+      "plan_line_ids": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ]
+    },
+    {
+      "id": "inv02_only",
+      "description": "Financial subset comparison only; omission does not establish safe deferral.",
+      "plan_line_ids": [
+        "L3",
+        "L4"
+      ]
+    }
+  ]
+}
